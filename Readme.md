@@ -2,6 +2,7 @@
 
 * Студент: [Вероника Ефимова](https://up.htmlacademy.ru/htmlcss/40/user/2475289).
 * Наставник: [Виктор Рыбаков](https://htmlacademy.ru/profile/viktor-rybakov).
+* Сайт: [МОй проект Sedona](https://nicae-dev.github.io/2475289-sedona-40/)
 
 ---
 
