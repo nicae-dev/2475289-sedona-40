@@ -11,7 +11,7 @@
   <body>
     <header class="page-header" data-test="header">
       <a class="logo" href="https://htmlacademy.ru">
-        <img class="logo-image" src="#" alt="Логотип сайта">
+        <img class="logo-image" src="images/logo.svg" width="140" height="70" alt="Логотип сайта">
         <h1 class="visually-hidden">City of Sedona</h1>
       </a>
       <nav class="navigation">
@@ -20,7 +20,7 @@
             <a class="navigation-link navigation-link-current">Главная</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="#">О седоне</a>
+            <a class="navigation-link" href="#">О Седоне</a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="catalog.html">Гостиницы</a>
@@ -35,7 +35,7 @@
           </li>
           <li class="navigation-item">
             <a class="navigation-link navigation-link-liked" href="#">
-              <span class="visually-hidden">Избранное</span>
+              <span class="visually-hidden">Отелей в избранном:</span>
               <span class="navigation-link-liked-count">12</span>
             </a>
           </li>
@@ -48,10 +48,10 @@
 
     </header>
 
-    <main class="main-index" data-test="main">
+    <main class="page-main" data-test="main">
       <section class="hero" data-test="hero">
         <h2 class="visually-hidden">Слоган</h2>
-        <img class="hero-slogan" src="#" alt="Welcome to the gorgeous Sedona, because the Grand Canyon sucks!">
+        <img class="hero-slogan" src="images/welcome.svg" width="458" height="352" alt="Welcome to the gorgeous Sedona, because the Grand Canyon sucks!">
       </section>
 
       <section class="features" data-test="advantages">
@@ -65,8 +65,7 @@
             <h3 class="features-item-title list-item-square-title">Настоящий городок</h3>
             <p class="features-item-desc list-item-square-desc">Седона — не аттракцион для туристов, там течёт своя
               жизнь</p>
-            <!-- TODO картинку лучше как ::after добавить? -->
-            <img class="features-item-image" src="" alt="Кафе вдали, рядом зелень">
+            <img class="features-item-image" src="images/feature-1.jpg" width="800" height="385" alt="Кафе вдали, рядом зелень">
           </li>
           <li class="features-item list-item-square">
             <h3 class="features-item-title list-item-square-title">Небольшая площадь</h3>
@@ -81,8 +80,7 @@
             <p class="features-item-desc list-item-square-desc">Большинство едет в Гранд Каньон и толпится там</p>
           </li>
           <li class="features-item list-item-square list-item-square-blue">
-            <!-- TODO картинку лучше как ::before добавить? -->
-            <img class="features-item-image" src="" alt="Каньон вид сверху">
+            <img class="features-item-image" src="images/feature-2.jpg" width="800" height="385" alt="Каньон вид сверху">
             <h3 class="features-item-title list-item-square-title">Там есть мост дьявола</h3>
             <p class="features-item-desc list-item-square-desc">Да, по нему можно пройти! Если вы осмелитесь, разумеется
             </p>
@@ -100,17 +98,16 @@
 
         <ul class="advantages-list">
           <li class="advantages-item list-item-square">
-            <h3 class="advantages-item-title list-item-square-title">Жильё</h3>
+            <h3 class="advantages-item-title list-item-square-title list-item-icon-house">Жильё</h3>
             <p class="advantages-item-desc list-item-square-desc">Рекомендуем пожитьв настоящем мотеле, всё как в кино!
             </p>
           </li>
           <li class="advantages-item list-item-square">
-            <h3 class="advantages-item-title list-item-square-title">Еда</h3>
-            <p class="advantages-item-desc list-item-square-desc">Всегда заказывайте топовый фирменный бургер, вы не
-              разочаруетесь!</p>
+            <h3 class="advantages-item-title list-item-square-title list-item-icon-food">Еда</h3>
+            <p class="advantages-item-desc list-item-square-desc">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
           </li>
           <li class="advantages-item list-item-square">
-            <h3 class="advantages-item-title list-item-square-title">Сувениры</h3>
+            <h3 class="advantages-item-title list-item-square-title list-item-icon-souvenir">Сувениры</h3>
             <p class="advantages-item-desc list-item-square-desc">Не только китайского, но и настоящего местного
               производства!</p>
           </li>
@@ -123,11 +120,10 @@
         <header class="search-header">
           <h2 class="visually-hidden">Поиск гостиниц</h2>
           <p class="search-title section-title">Заинтересовались?</p>
-          <p class="search-desc section-desc">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения
-            гостиниц в Седоне</p>
+          <p class="search-desc section-desc">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         </header>
 
-        <button class="button button-maroon" type="button">ПОИСК ГОСТИНИЦЫ В седоне</button>
+        <button class="button button-maroon" type="button">Поиск гостиницы в Седоне</button>
 
       </section>
 
@@ -139,8 +135,7 @@
 
           <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
             <label class="subscribe-form-label visually-hidden" for="subscribe-form-email">Ваш e-mail</label>
-            <input class="subscribe-form-email" id="subscribe-form-email" type="email" name="email"
-              placeholder="Ваш e-mail" required>
+            <input class="subscribe-form-email" id="subscribe-form-email" type="email" name="email" placeholder="Ваш e-mail" required>
             <button class="subscribe-form-submit button button-blue" type="submit">Подписаться</button>
           </form>
         </section>
@@ -176,7 +171,9 @@
 
       <section class="footer-partners">
         <h2 class="visually-hidden">Партнеры</h2>
-        <a class="footer-partners-link" href="https://htmlacademy.ru/intensive/htmlcss"><img src="#" alt="HtmlAcademy"></a>
+        <a class="footer-partners-link" href="https://htmlacademy.ru/intensive/htmlcss">
+          <img src="images/html-academy-logo.svg" width="115" height="34" alt="HtmlAcademy">
+        </a>
       </section>
 
     </footer>
