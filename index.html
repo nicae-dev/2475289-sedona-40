@@ -13,7 +13,7 @@
     <div class="page-container">
 
       <header class="page-header" data-test="header">
-        <a class="logo" href="https://htmlacademy.ru">
+        <a class="logo" href="index.html">
           <img class="logo-image" src="images/logo.svg" width="140" height="70" alt="Логотип сайта">
           <h1 class="visually-hidden">City of Sedona</h1>
         </a>
@@ -30,25 +30,21 @@
             </li>
           </ul>
 
-          <ul class="navigation-list navigation-user">
-            <li class="navigation-item">
+          <ul class="navigation-list navigation-user-list">
+            <li class="navigation-item navigation-user-item">
               <a class="navigation-link navigation-link-search" href="#">
                 <span class="visually-hidden">Поиск</span>
               </a>
             </li>
-            <li class="navigation-item">
+            <li class="navigation-item navigation-user-item">
               <a class="navigation-link navigation-link-liked" href="#">
                 <span class="visually-hidden">Отелей в избранном:</span>
-                <span class="navigation-link-liked">12</span>
+                <span class="navigation-link-liked-count">12</span>
               </a>
             </li>
-            <li class="navigation-item">
-              <a class="navigation-button button button-maroon" href="#">Хочу сюда!</a>
-            </li>
           </ul>
-
         </nav>
-
+        <a class="header-link button button-maroon" href="#">Хочу сюда!</a>
       </header>
 
       <main class="page-main" data-test="main">
@@ -60,36 +56,35 @@
 
         <section class="features" data-test="advantages">
           <header class="features-header">
-            <h2 class="features-title section-title">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</h2>
-            <p class="features-desc section-desc">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
+            <h2 class="features-title section-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
+            <p class="features-desc section-desc">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
           </header>
 
-          <ul class="features-list">
-            <li class="features-item list-item-square features-item-blue">
-              <h3 class="features-item-title list-item-square-title section-text-color-light">Настоящий городок</h3>
-              <p class="features-item-desc list-item-square-desc section-text-color-light">Седона — не аттракцион для
-                туристов, там течёт своя
-                жизнь</p>
+          <ul class="features-list list-square">
+            <li class="features-item list-square-item features-item-blue">
+              <h3 class="features-item-title list-square-item-title section-text-color-light">Настоящий городок</h3>
+              <p class="features-item-desc list-square-item-desc section-text-color-light">Седона — не аттракцион для
+                туристов, там течёт своя жизнь</p>
               <img class="features-item-image" src="images/feature-1.jpg" width="800" height="385"
                 alt="Кафе вдали, рядом зелень">
             </li>
-            <li class="features-item list-item-square">
-              <h3 class="features-item-title list-item-square-title">Небольшая площадь</h3>
-              <p class="features-item-desc list-item-square-desc">Все достопримечательности находятся очень близко</p>
+            <li class="features-item list-square-item">
+              <h3 class="features-item-title list-square-item-title">Небольшая площадь</h3>
+              <p class="features-item-desc list-square-item-desc">Все достопримечательности находятся очень близко</p>
             </li>
-            <li class="features-item list-item-square">
-              <h3 class="features-item-title list-item-square-title">Красивая дорога</h3>
-              <p class="features-item-desc list-item-square-desc">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+            <li class="features-item list-square-item">
+              <h3 class="features-item-title list-square-item-title">Красивая дорога</h3>
+              <p class="features-item-desc list-square-item-desc">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
             </li>
-            <li class="features-item list-item-square">
-              <h3 class="features-item-title list-item-square-title">Мало туристов</h3>
-              <p class="features-item-desc list-item-square-desc">Большинство едет в Гранд Каньон и толпится там</p>
+            <li class="features-item list-square-item">
+              <h3 class="features-item-title list-square-item-title">Мало туристов</h3>
+              <p class="features-item-desc list-square-item-desc">Большинство едет в Гранд Каньон и толпится там</p>
             </li>
-            <li class="features-item list-item-square features-item-blue">
+            <li class="features-item list-square-item features-item-blue">
               <img class="features-item-image" src="images/feature-2.jpg" width="800" height="385"
                 alt="Каньон вид сверху">
-              <h3 class="features-item-title list-item-square-title section-text-color-light">Там есть мост дьявола</h3>
-              <p class="features-item-desc list-item-square-desc section-text-color-light">Да, по нему можно пройти!
+              <h3 class="features-item-title list-square-item-title section-text-color-light">Там есть <br>мост дьявола</h3>
+              <p class="features-item-desc list-square-item-desc section-text-color-light">Да, по нему можно пройти!
                 Если вы осмелитесь, разумеется
               </p>
             </li>
@@ -104,21 +99,21 @@
             <p class="advantages-desc section-desc">Опытный персонал и качественное обслуживание!</p>
           </header>
 
-          <ul class="advantages-list">
-            <li class="advantages-item list-item-square">
-              <h3 class="advantages-item-title list-item-square-title list-item-icon-house">Жильё</h3>
-              <p class="advantages-item-desc list-item-square-desc">Рекомендуем пожитьв настоящем мотеле, всё как в
+          <ul class="advantages-list list-square">
+            <li class="advantages-item list-square-item">
+              <h3 class="advantages-item-title list-square-item-title list-item-icon list-item-icon-house">Жильё</h3>
+              <p class="advantages-item-desc list-square-item-desc">Рекомендуем пожить <br>в настоящем мотеле, <br>всё как в
                 кино!
               </p>
             </li>
-            <li class="advantages-item list-item-square">
-              <h3 class="advantages-item-title list-item-square-title list-item-icon-eating">Еда</h3>
-              <p class="advantages-item-desc list-item-square-desc">Всегда заказывайте топовый фирменный бургер, вы не
+            <li class="advantages-item list-square-item">
+              <h3 class="advantages-item-title list-square-item-title list-item-icon list-item-icon-eating">Еда</h3>
+              <p class="advantages-item-desc list-square-item-desc">Всегда заказывайте топовый фирменный бургер, вы не
                 разочаруетесь!</p>
             </li>
-            <li class="advantages-item list-item-square">
-              <h3 class="advantages-item-title list-item-square-title list-item-icon-souvenir">Сувениры</h3>
-              <p class="advantages-item-desc list-item-square-desc">Не только китайского, но и настоящего местного
+            <li class="advantages-item list-square-item">
+              <h3 class="advantages-item-title list-square-item-title list-item-icon list-item-icon-souvenir">Сувениры</h3>
+              <p class="advantages-item-desc list-square-item-desc">Не только китайского, <br>но и настоящего местного
                 производства!</p>
             </li>
           </ul>
@@ -130,8 +125,7 @@
           <header class="search-header">
             <h2 class="visually-hidden">Поиск гостиниц</h2>
             <p class="search-title section-title">Заинтересовались?</p>
-            <p class="search-desc section-desc">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения
-              гостиниц в Седоне</p>
+            <p class="search-desc section-desc">Укажите предполагаемые даты поездки, <br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
           </header>
 
           <button class="button button-larger" type="button">Поиск гостиницы в Седоне</button>
@@ -140,14 +134,15 @@
 
         <footer class="inner-footer">
           <section class="subscribe subscribe-background-image" data-test="subscribe">
-
-            <h2 class="subscribe-title section-title">Подпишитесь на рассылку</h2>
-            <p class="subscribe-desc section-desc">Только полезная информация и никакого спама,
-              честное бойскаутское!</p>
+            <header class="subscribe-header">
+              <h2 class="subscribe-title section-title">Подпишитесь на рассылку</h2>
+              <p class="subscribe-desc section-desc">Только полезная информация и никакого спама,
+                честное бойскаутское!</p>
+              </header>
 
             <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
               <label class="subscribe-form-label visually-hidden" for="subscribe-form-email">Ваш e-mail</label>
-              <input class="subscribe-form-email" id="subscribe-form-email" type="email" name="email"
+              <input class="subscribe-form-email input" id="subscribe-form-email" type="email" name="email"
                 placeholder="Ваш e-mail" required>
               <button class="subscribe-form-submit button button-larger button-blue" type="submit">Подписаться</button>
             </form>

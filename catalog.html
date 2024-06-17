@@ -13,7 +13,7 @@
     <div class="page-container">
 
       <header class="page-header" data-test="header">
-        <a class="logo" href="https://htmlacademy.ru">
+        <a class="logo" href="index.html">
           <img class="logo-image" src="images/logo.svg" width="140" height="70" alt="Логотип сайта">
         </a>
         <nav class="navigation">
@@ -29,21 +29,21 @@
             </li>
           </ul>
 
-          <ul class="navigation-list navigation-user">
-            <li class="navigation-item">
+          <ul class="navigation-list navigation-user-list">
+            <li class="navigation-item navigation-user-item">
               <a class="navigation-link navigation-link-search" href="#">
                 <span class="visually-hidden">Поиск</span>
               </a>
             </li>
-            <li class="navigation-item">
+            <li class="navigation-item navigation-user-item">
               <a class="navigation-link navigation-link-liked" href="#">
                 <span class="visually-hidden">Отелей в избранном:</span>
                 <span class="navigation-link-liked-count">12</span>
               </a>
             </li>
           </ul>
-          <a class="navigation-button button  button-maroon" href="#">Хочу сюда!</a>
         </nav>
+        <a class="header-link button button-maroon" href="#">Хочу сюда!</a>
 
       </header>
 
@@ -57,7 +57,7 @@
               </a>
             </li>
             <li class="breadcrumbs-item">
-              <a class="breadcrumbs-link">Гостиницы</a>
+              <a class="breadcrumbs-link breadcrumbs-link-current" title="Текущая страница">Гостиницы</a>
             </li>
           </ul>
 
@@ -115,12 +115,12 @@
               <fieldset class="catalog-filters-form-group">
                 <legend class="catalog-filters-form-group-title">Стоимость, ₽:</legend>
                 <label>
-                  <span class="visually-hidden">От</span>
-                  <input class="text-input catalog-filters-form-price-start" type="number" name="price-start" value="0">
+                  <span>От</span>
+                  <input class="input catalog-filters-form-price-start" type="number" name="price-start" value="0">
                 </label>
                 <label>
-                  <span class="visually-hidden">До</span>
-                  <input class="text-input catalog-filters-form-price-end" type="number" name="price-end" value="9000">
+                  <span>До</span>
+                  <input class="input catalog-filters-form-price-end" type="number" name="price-end" value="9000">
                 </label>
                 <!-- TODO ползунок цены -->
               </fieldset>
@@ -171,7 +171,7 @@
                 </a>
                 <p class="hotel-type">Гостиница</p>
                 <p class="hotel-price">От 4000 ₽</p>
-                <p class="hotel-stars stars-four"><span class="visually-hidden">4 звезды</span></p>
+                <p class="hotel-stars stars stars-four"><span class="visually-hidden">4 звезды</span></p>
                 <p class="hotel-rating">Рейтинг: 8,5</p>
                 <a class="button button-maroon" href="#">подробнее</a>
                 <button class="button button-blue" type="button" title="Добавить в избранное">в избранное</button>
@@ -186,7 +186,7 @@
                 </a>
                 <p class="hotel-type">Гостиница</p>
                 <p class="hotel-price">От 5000 ₽</p>
-                <p class="hotel-stars stars-four"><span class="visually-hidden">4 звезды</span></p>
+                <p class="hotel-stars stars stars-four"><span class="visually-hidden">4 звезды</span></p>
                 <p class="hotel-rating">Рейтинг: 9,2</p>
                 <a class="button button-maroon" href="#">подробнее</a>
                 <button class="button button-green" type="button" title="Нажмите, чтобы удалить из избранного">в
@@ -202,7 +202,7 @@
                 </a>
                 <p class="hotel-type">Гостиница</p>
                 <p class="hotel-price">От 2500 ₽</p>
-                <p class="hotel-stars stars-three"><span class="visually-hidden">3 звезды</span></p>
+                <p class="hotel-stars stars stars-three"><span class="visually-hidden">3 звезды</span></p>
                 <p class="hotel-rating">Рейтинг: 6,9</p>
                 <a class="button button-maroon" href="#">подробнее</a>
                 <button class="button button-blue" type="button" title="Добавить в избранное">в избранное</button>
@@ -217,7 +217,7 @@
                 </a>
                 <p class="hotel-type">Гостиница</p>
                 <p class="hotel-price">От 1500 ₽</p>
-                <p class="hotel-stars stars-two"><span class="visually-hidden">2 звезды</span></p>
+                <p class="hotel-stars stars stars-two"><span class="visually-hidden">2 звезды</span></p>
                 <p class="hotel-rating">Рейтинг: 5,0</p>
                 <a class="button button-maroon" href="#">подробнее</a>
                 <button class="button button-blue" type="button" title="Добавить в избранное">в избранное</button>
@@ -228,7 +228,8 @@
           <footer class="hotels-footer">
             <ul class="pagination-list">
               <li class="pagination-item">
-                <a class="pagination-link pagination-link-current button button-larger button-blue" title="Текущая страница">1</a>
+                <a class="pagination-link pagination-link-current button button-larger button-blue"
+                  title="Текущая страница">1</a>
               </li>
               <li class="pagination-item">
                 <a class="pagination-link button button-larger button-blue" href="#">2</a>
@@ -255,13 +256,15 @@
         <footer class="inner-footer">
           <section class="subscribe" data-test="subscribe">
 
-            <h2 class="subscribe-title section-title">Подпишитесь на рассылку</h2>
-            <p class="subscribe-desc section-desc">Только полезная информация и никакого спама, честное бойскаутское!
-            </p>
+            <header class="subscribe-header">
+              <h2 class="subscribe-title section-title">Подпишитесь на рассылку</h2>
+              <p class="subscribe-desc section-desc">Только полезная информация и никакого спама, честное бойскаутское!
+              </p>
+            </header>
 
             <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
               <label class="subscribe-form-label visually-hidden" for="subscribe-form-email">Ваш e-mail</label>
-              <input class="subscribe-form-email" id="subscribe-form-email" type="email" name="email"
+              <input class="subscribe-form-email  input" id="subscribe-form-email" type="email" name="email"
                 placeholder="Ваш e-mail" required>
               <button class="subscribe-form-submit button button-larger button-blue" type="submit">Подписаться</button>
             </form>
