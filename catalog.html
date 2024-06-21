@@ -31,14 +31,14 @@
 
           <ul class="navigation-list navigation-user-list">
             <li class="navigation-item navigation-user-item">
-              <a class="navigation-link navigation-link-search" href="#">
+              <a class="navigation-link navigation-icon navigation-icon-search" href="#">
                 <span class="visually-hidden">Поиск</span>
               </a>
             </li>
             <li class="navigation-item navigation-user-item">
-              <a class="navigation-link navigation-link-liked" href="#">
+              <a class="navigation-link navigation-icon navigation-icon-liked" href="#">
                 <span class="visually-hidden">Отелей в избранном:</span>
-                <span class="navigation-link-liked-count">12</span>
+                <span class="navigation-icon-liked-count">12</span>
               </a>
             </li>
           </ul>
@@ -112,21 +112,25 @@
                 </ul>
 
               </fieldset>
-              <fieldset class="catalog-filters-form-group">
+              <fieldset class="catalog-filters-form-group catalog-filters-form-group-price">
                 <legend class="catalog-filters-form-group-title">Стоимость, ₽:</legend>
-                <label>
-                  <span>От</span>
-                  <input class="input catalog-filters-form-price-start" type="number" name="price-start" value="0">
-                </label>
-                <label>
-                  <span>До</span>
-                  <input class="input catalog-filters-form-price-end" type="number" name="price-end" value="9000">
-                </label>
+                <div class="catalog-filters-form-group-price-inner-wrap">
+                  <label class="catalog-filters-form-price-label catalog-filters-form-price-start-label" for="catalog-filters-form-price-start">От</label>
+                  <input class="input catalog-filters-form-price-start" id="catalog-filters-form-price-start"
+                  type="number" name="price-start" value="0">
+                  <label class=" catalog-filters-form-price-label catalog-filters-form-price-end-label" for="catalog-filters-form-price-end">До</label>
+                  <input class="input catalog-filters-form-price-end" id="catalog-filters-form-price-end" type="number"
+                  name="price-end" value="9000">
+                </div>
                 <!-- TODO ползунок цены -->
+                  <label class="catalog-filters-form-range-label visually-hidden" for="catalog-filters-form-range">Диапазон</label>
+                  <input class="catalog-filters-form-range" id="catalog-filters-form-range" type="range" name="price-range">
               </fieldset>
 
-              <button class="button button-blue" type="submit">Применить</button>
-              <button class="button button-transparent" type="reset">Сбросить</button>
+              <div class="catalog-filters-form-buttons">
+                <button class="catalog-filters-form-button button button-blue" type="submit">Применить</button>
+                <button class="catalog-filters-form-button button button-transparent" type="reset">Сбросить</button>
+              </div>
 
             </form>
           </section>
@@ -144,17 +148,17 @@
 
             <ul class="viewing-type-list">
               <li class="viewing-type-item">
-                <a class="viewing-type-link viewing-type-tile viewing-type-current" href="catalog.html?view=tile">
+                <a class="viewing-type-link viewing-type-icon-tile viewing-type-current" href="catalog.html?view=tile">
                   <span class="visually-hidden">Показать плиткой</span>
                 </a>
               </li>
               <li class="viewing-type-item">
-                <a class="viewing-type-link viewing-type-card" href="catalog.html?view=card">
+                <a class="viewing-type-link viewing-type-icon-card" href="catalog.html?view=card">
                   <span class="visually-hidden">Показать карточками</span>
                 </a>
               </li>
               <li class="viewing-type-item">
-                <a class="viewing-type-link viewing-type-list" href="catalog.html?view=list">
+                <a class="viewing-type-link viewing-type-icon-list" href="catalog.html?view=list">
                   <span class="visually-hidden">Показать списком</span>
                 </a>
               </li>
