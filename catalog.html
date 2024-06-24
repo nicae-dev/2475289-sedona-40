@@ -19,13 +19,13 @@
         <nav class="navigation">
           <ul class="navigation-list">
             <li class="navigation-item">
-              <a class="navigation-link" href="index.html">Главная</a>
+              <a class="navigation-link text-link" href="index.html">Главная</a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link" href="#">О Седоне</a>
+              <a class="navigation-link text-link" href="#">О Седоне</a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link navigation-link-current">Гостиницы</a>
+              <a class="navigation-link text-link navigation-link-current">Гостиницы</a>
             </li>
           </ul>
 
@@ -113,7 +113,8 @@
 
               </fieldset>
               <fieldset class="catalog-filters-form-group catalog-filters-form-group-price">
-                <legend class="catalog-filters-form-group-title">Стоимость, ₽:</legend>
+                <legend class="catalog-filters-form-group-title">Стоимость, <span>&#8381;</span>:</legend>
+                <div>
                 <div class="catalog-filters-form-group-price-inner-wrap">
                   <label class="catalog-filters-form-price-label catalog-filters-form-price-start-label" for="catalog-filters-form-price-start">От</label>
                   <input class="input catalog-filters-form-price-start" id="catalog-filters-form-price-start"
@@ -123,8 +124,11 @@
                   name="price-end" value="9000">
                 </div>
                 <!-- TODO ползунок цены -->
-                  <label class="catalog-filters-form-range-label visually-hidden" for="catalog-filters-form-range">Диапазон</label>
-                  <input class="catalog-filters-form-range" id="catalog-filters-form-range" type="range" name="price-range">
+                <label class="catalog-filters-form-range-label" >
+                  <span class="visually-hidden">Диапазон</span>
+                  <input class="catalog-filters-form-range" type="range" name="price-range">
+                </label>
+              </div>
               </fieldset>
 
               <div class="catalog-filters-form-buttons">
@@ -148,17 +152,17 @@
 
             <ul class="viewing-type-list">
               <li class="viewing-type-item">
-                <a class="viewing-type-link viewing-type-icon-tile viewing-type-current" href="catalog.html?view=tile">
+                <a class="viewing-type-link viewing-type-icon-tile viewing-type-current" href="catalog.html?view=tile" title="Показать плиткой">
                   <span class="visually-hidden">Показать плиткой</span>
                 </a>
               </li>
               <li class="viewing-type-item">
-                <a class="viewing-type-link viewing-type-icon-card" href="catalog.html?view=card">
+                <a class="viewing-type-link viewing-type-icon-card" href="catalog.html?view=card" title="Показать карточками">
                   <span class="visually-hidden">Показать карточками</span>
                 </a>
               </li>
               <li class="viewing-type-item">
-                <a class="viewing-type-link viewing-type-icon-list" href="catalog.html?view=list">
+                <a class="viewing-type-link viewing-type-icon-list" href="catalog.html?view=list" title="Показать списком">
                   <span class="visually-hidden">Показать списком</span>
                 </a>
               </li>
@@ -168,13 +172,13 @@
           <ul class="hotels-list">
             <li class="hotels-item">
               <article class="hotels-card">
-                <a class="hotel-link" href="#">
+                <a class="hotel-link text-link" href="#">
                   <h3 class="hotel-title">Amara Resort & Spa</h3>
                   <img class="hotel-image" src="images/hotel-1.jpg" width="300" height="212"
                     alt="Вид из гостиницы, ущелье, звездное небо">
                 </a>
                 <p class="hotel-type">Гостиница</p>
-                <p class="hotel-price">От 4000 ₽</p>
+                <p class="hotel-price">От 4000 <span>&#8381;</span></p>
                 <p class="hotel-stars stars stars-four"><span class="visually-hidden">4 звезды</span></p>
                 <p class="hotel-rating">Рейтинг: 8,5</p>
                 <a class="button button-maroon" href="#">подробнее</a>
@@ -183,13 +187,13 @@
             </li>
             <li class="hotels-item">
               <article class="hotels-card">
-                <a class="hotel-link" href="#">
+                <a class="hotel-link text-link" href="#">
                   <h3 class="hotel-title">Villas at Poco Diablo</h3>
                   <img class="hotel-image" src="images/hotel-2.jpg" width="300" height="212"
                     alt="Вид из гостиницы, горы, облака, радуга">
                 </a>
                 <p class="hotel-type">Гостиница</p>
-                <p class="hotel-price">От 5000 ₽</p>
+                <p class="hotel-price">От 5000 <span>&#8381;</span></p>
                 <p class="hotel-stars stars stars-four"><span class="visually-hidden">4 звезды</span></p>
                 <p class="hotel-rating">Рейтинг: 9,2</p>
                 <a class="button button-maroon" href="#">подробнее</a>
@@ -200,12 +204,12 @@
             <li class="hotels-item">
               <article class="hotels-card">
                 <a class="hotel-link" href="#">
-                  <h3 class="hotel-title">Desert Quail Inn</h3>
+                  <h3 class="hotel-title text-link">Desert Quail Inn</h3>
                   <img class="hotel-image" src="images/hotel-3.jpg" width="300" height="212"
                     alt="Вид из гостиницы, горы, небо">
                 </a>
                 <p class="hotel-type">Гостиница</p>
-                <p class="hotel-price">От 2500 ₽</p>
+                <p class="hotel-price">От 2500 <span>&#8381;</span></p>
                 <p class="hotel-stars stars stars-three"><span class="visually-hidden">3 звезды</span></p>
                 <p class="hotel-rating">Рейтинг: 6,9</p>
                 <a class="button button-maroon" href="#">подробнее</a>
@@ -214,13 +218,13 @@
             </li>
             <li class="hotels-item">
               <article class="hotels-card">
-                <a class="hotel-link" href="#">
+                <a class="hotel-link text-link" href="#">
                   <h3 class="hotel-title">GreenTree Inn</h3>
                   <img class="hotel-image" src="images/hotel-4.jpg" width="300" height="212"
                     alt="Вид из гостиницы, горы, ночь, звездное небо">
                 </a>
                 <p class="hotel-type">Гостиница</p>
-                <p class="hotel-price">От 1500 ₽</p>
+                <p class="hotel-price">От 1500 <span>&#8381;</span></p>
                 <p class="hotel-stars stars stars-two"><span class="visually-hidden">2 звезды</span></p>
                 <p class="hotel-rating">Рейтинг: 5,0</p>
                 <a class="button button-maroon" href="#">подробнее</a>
@@ -302,7 +306,7 @@
 
         <section class="footer-phone">
           <h2 class="visually-hidden">Контактный телефон</h2>
-          <address><a class="footer-phone-link" href="tel:+78128121212">+7 (812) 812-12-12</a></address>
+          <address><a class="footer-phone-link text-link" href="tel:+78128121212">+7 (812) 812-12-12</a></address>
         </section>
 
         <section class="footer-partners">
