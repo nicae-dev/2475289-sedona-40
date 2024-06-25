@@ -662,12 +662,13 @@ body {
 /* Стили для подвала */
 .page-footer {
   padding: 45px 70px 35px 70px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 350px 1fr;
+  gap: 10px;
 }
 
 .footer-social {
+  min-width: 150px;
   max-width: 300px;
 }
 
@@ -707,15 +708,22 @@ body {
   background-image: url("../icons/social-yt.svg");
 }
 
+.footer-phone {
+  text-align: center;
+}
+
 .footer-phone-link {
   font-weight: 400;
   font-size: 40px;
   line-height: 1em;
   font-style: normal;
-  text-align: center;
   text-transform: uppercase;
-  text-decoration: none;
+  white-space: nowrap;
   color: inherit;
+}
+
+.footer-partners {
+  text-align: right;
 }
 
 .footer-partners-link {
@@ -827,17 +835,13 @@ body {
 }
 
 .catalog-filters-form {
-  /* display: grid;
-  grid-template-columns: 1fr 1fr 290px 200px;
-  grid-template-rows: auto auto;
-  gap: 70px; */
   display: flex;
   flex-wrap: wrap;
   gap: 50px;
 }
 
 .catalog-filters-form-group {
-  /* display: contents; */
+  flex-basis: 200px;
   margin: 0;
   padding: 0;
   padding-right: 20px;
@@ -845,7 +849,6 @@ body {
 }
 
 .catalog-filters-form-group-title {
-  /* order: -1; */
   margin-bottom: 32px;
   font-weight: 700;
   font-size: 20px;
@@ -866,6 +869,9 @@ body {
 .catalog-filters-form-group-price {
   margin-left: auto;
   flex-basis: 200px;
+}
+
+.catalog-filters-form-group-inner-wrap {
 }
 
 .catalog-filters-form-group-price-inner-wrap {
@@ -912,13 +918,16 @@ body {
 }
 
 .catalog-filters-form-buttons {
-  align-self: flex-end;
+  /* align-self: flex-end; */
+  padding-top: 56px;
   flex-basis: 190px;
 }
 
 .catalog-filters-form-button {
-  margin-top: 32px;
   width: 100%;
+}
+.catalog-filters-form-button:not(:last-child) {
+  margin-bottom: 32px;
 }
 
 /* Отели */

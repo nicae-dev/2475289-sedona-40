@@ -114,21 +114,23 @@
               </fieldset>
               <fieldset class="catalog-filters-form-group catalog-filters-form-group-price">
                 <legend class="catalog-filters-form-group-title">Стоимость, <span>&#8381;</span>:</legend>
-                <div>
-                <div class="catalog-filters-form-group-price-inner-wrap">
-                  <label class="catalog-filters-form-price-label catalog-filters-form-price-start-label" for="catalog-filters-form-price-start">От</label>
-                  <input class="input catalog-filters-form-price-start" id="catalog-filters-form-price-start"
-                  type="number" name="price-start" value="0">
-                  <label class=" catalog-filters-form-price-label catalog-filters-form-price-end-label" for="catalog-filters-form-price-end">До</label>
-                  <input class="input catalog-filters-form-price-end" id="catalog-filters-form-price-end" type="number"
-                  name="price-end" value="9000">
+                <div class="catalog-filters-form-group-inner-wrap">
+                  <div class="catalog-filters-form-group-price-inner-wrap">
+                    <label class="catalog-filters-form-price-label catalog-filters-form-price-start-label"
+                      for="catalog-filters-form-price-start">От</label>
+                    <input class="input catalog-filters-form-price-start" id="catalog-filters-form-price-start"
+                      type="number" name="price-start" value="0">
+                    <label class=" catalog-filters-form-price-label catalog-filters-form-price-end-label"
+                      for="catalog-filters-form-price-end">До</label>
+                    <input class="input catalog-filters-form-price-end" id="catalog-filters-form-price-end"
+                      type="number" name="price-end" value="9000">
+                  </div>
+                  <!-- TODO ползунок цены -->
+                  <label class="catalog-filters-form-range-label">
+                    <span class="visually-hidden">Диапазон</span>
+                    <input class="catalog-filters-form-range" type="range" name="price-range">
+                  </label>
                 </div>
-                <!-- TODO ползунок цены -->
-                <label class="catalog-filters-form-range-label" >
-                  <span class="visually-hidden">Диапазон</span>
-                  <input class="catalog-filters-form-range" type="range" name="price-range">
-                </label>
-              </div>
               </fieldset>
 
               <div class="catalog-filters-form-buttons">
@@ -152,17 +154,20 @@
 
             <ul class="viewing-type-list">
               <li class="viewing-type-item">
-                <a class="viewing-type-link viewing-type-icon-tile viewing-type-current" href="catalog.html?view=tile" title="Показать плиткой">
+                <a class="viewing-type-link viewing-type-icon-tile viewing-type-current" href="catalog.html?view=tile"
+                  title="Показать плиткой">
                   <span class="visually-hidden">Показать плиткой</span>
                 </a>
               </li>
               <li class="viewing-type-item">
-                <a class="viewing-type-link viewing-type-icon-card" href="catalog.html?view=card" title="Показать карточками">
+                <a class="viewing-type-link viewing-type-icon-card" href="catalog.html?view=card"
+                  title="Показать карточками">
                   <span class="visually-hidden">Показать карточками</span>
                 </a>
               </li>
               <li class="viewing-type-item">
-                <a class="viewing-type-link viewing-type-icon-list" href="catalog.html?view=list" title="Показать списком">
+                <a class="viewing-type-link viewing-type-icon-list" href="catalog.html?view=list"
+                  title="Показать списком">
                   <span class="visually-hidden">Показать списком</span>
                 </a>
               </li>
@@ -174,8 +179,9 @@
               <article class="hotels-card">
                 <a class="hotel-link text-link" href="#">
                   <h3 class="hotel-title">Amara Resort & Spa</h3>
-                  <img class="hotel-image" src="images/hotel-1.jpg" width="300" height="212"
-                    alt="Вид из гостиницы, ущелье, звездное небо">
+                </a>
+                <img class="hotel-image" src="images/hotel-1.jpg" width="300" height="212"
+                  alt="Вид из гостиницы, ущелье, звездное небо">
                 </a>
                 <p class="hotel-type">Гостиница</p>
                 <p class="hotel-price">От 4000 <span>&#8381;</span></p>
