@@ -911,40 +911,42 @@ body {
 
 .catalog-filters-form-group-price-inner-wrap {
   display: flex;
+  gap: 2px;
   margin-bottom: 36px;
 }
 
-.catalog-filters-form-price-label {
-  padding: 12px 20px 12px 10px;
+.catalog-filters-price-wrapper {
+  display: block;
+  position: relative;
+}
+
+.catalog-filters-price-label {
+  position: absolute;
+  right: 20px;
+  /* top: 0; */
+  top: 12px;
+  bottom: 0;
+  margin: auto 0;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.33em;
   text-transform: lowercase;
-  color: rgba(0, 0, 0, 0.3);
-  background-color: var(--form-element-2);
+  color: var(--text-basic);
+  opacity: 0.3;
 }
 
-.catalog-filters-form-price-start-label {
-  margin-right: 2px;
-  order: 1;
+.catalog-filters-price-start,
+.catalog-filters-price-end {
+  padding-right: 37px;
+  width: 143px;
 }
 
-.catalog-filters-form-price-start {
-  padding-right: 0;
+.catalog-filters-price-start {
   border-radius: 4px 0 0 4px;
-  width: 95px;
 }
 
-.catalog-filters-form-price-end-label {
+.catalog-filters-price-end {
   border-radius: 0 4px 4px 0;
-  order: 4;
-}
-
-.catalog-filters-form-price-end {
-  padding-right: 0;
-  border-radius: 0;
-  width: 95px;
-  order: 3;
 }
 
 .catalog-filters-form-range {

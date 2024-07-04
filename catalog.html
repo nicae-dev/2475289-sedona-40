@@ -120,19 +120,18 @@
                     </label>
                   </li>
                 </ul>
-
               </fieldset>
               <fieldset class="catalog-filters-form-group catalog-filters-form-group-price">
                 <legend class="catalog-filters-form-group-title">Стоимость, <span>&#8381;</span>:</legend>
                   <div class="catalog-filters-form-group-price-inner-wrap">
-                    <label class="catalog-filters-form-price-label catalog-filters-form-price-start-label"
-                      for="catalog-filters-form-price-start">От</label>
-                    <input class="input catalog-filters-form-price-start" id="catalog-filters-form-price-start"
-                      type="number" name="price-start" value="0">
-                    <label class=" catalog-filters-form-price-label catalog-filters-form-price-end-label"
-                      for="catalog-filters-form-price-end">До</label>
-                    <input class="input catalog-filters-form-price-end" id="catalog-filters-form-price-end"
-                      type="number" name="price-end" value="9000">
+                    <label class="catalog-filters-price-wrapper">
+                      <span class="catalog-filters-price-label catalog-filters-price-start-label">От</span>
+                      <input class="input catalog-filters-price-start" type="number" name="price-start" value="0">
+                    </label>
+                    <label class="catalog-filters-price-wrapper">
+                      <span class=" catalog-filters-price-label catalog-filters-price-end-label">До</span>
+                      <input class="input catalog-filters-price-end" type="number" name="price-end" value="9000">
+                    </label>
                   </div>
                   <!-- TODO ползунок цены -->
                   <label class="catalog-filters-form-range-label">
