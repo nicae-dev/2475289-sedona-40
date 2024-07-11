@@ -74,7 +74,7 @@
             <li class="features-item features-item-with-image">
               <div class="list-square-item">
                 <h3 class="features-item-title list-square-item-title">Настоящий<br>городок</h3>
-                <p class="features-item-desc list-square-item-desc section-text-color-light">
+                <p class="list-square-item-desc">
                   Седона — не аттракцион для туристов, там течёт своя <br>жизнь
                 </p>
               </div>
@@ -83,22 +83,22 @@
             </li>
             <li class="features-item list-square-item">
               <h3 class="features-item-title list-square-item-title">Небольшая площадь</h3>
-              <p class="features-item-desc list-square-item-desc">Все достопримечательности находятся очень близко</p>
+              <p class="list-square-item-desc">Все достопримечательности находятся очень близко</p>
             </li>
             <li class="features-item list-square-item">
               <h3 class="features-item-title list-square-item-title">Красивая<br>дорога</h3>
-              <p class="features-item-desc list-square-item-desc">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+              <p class="list-square-item-desc">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
             </li>
             <li class="features-item list-square-item">
               <h3 class="features-item-title list-square-item-title">Мало<br>туристов</h3>
-              <p class="features-item-desc list-square-item-desc">Большинство едет в Гранд Каньон и толпится там</p>
+              <p class="list-square-item-desc">Большинство едет в Гранд Каньон и толпится там</p>
             </li>
             <li class="features-item features-item-with-image">
               <img class="features-item-image" src="images/feature-2.jpg" width="800" height="385"
                 alt="Каньон вид сверху">
               <div class="list-square-item">
                 <h3 class="features-item-title list-square-item-title">Там есть <br>мост дьявола</h3>
-                <p class="features-item-desc list-square-item-desc section-text-color-light">
+                <p class="list-square-item-desc ">
                   Да, по нему можно пройти! Если вы осмелитесь, разумеется
                 </p>
               </div>
@@ -147,26 +147,25 @@
               предложения гостиниц в Седоне</p>
           </header>
 
-          <button class="button button-larger" type="button">Поиск гостиницы в Седоне</button>
+          <button class="button button-larger" type="button" onclick="window.modalSearch.showModal()">Поиск гостиницы в
+            Седоне</button>
 
         </section>
 
-        <footer class="inner-footer">
-          <section class="subscribe subscribe-background-image" data-test="subscribe">
-            <header class="subscribe-header">
-              <h2 class="subscribe-title section-title">Подпишитесь на рассылку</h2>
-              <p class="subscribe-desc section-desc">Только полезная информация и никакого спама,
-                честное бойскаутское!</p>
-            </header>
+        <section class="subscribe subscribe-background-image" data-test="subscribe">
+          <header class="subscribe-header">
+            <h2 class="subscribe-title section-title">Подпишитесь на рассылку</h2>
+            <p class="subscribe-desc section-desc">Только полезная информация и никакого спама,
+              честное бойскаутское!</p>
+          </header>
 
-            <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-              <label class="subscribe-form-label visually-hidden" for="subscribe-form-email">Ваш e-mail</label>
-              <input class="subscribe-form-email input" id="subscribe-form-email" type="email" name="email"
-                placeholder="Ваш e-mail" required>
-              <button class="subscribe-form-submit button button-larger button-blue" type="submit">Подписаться</button>
-            </form>
-          </section>
-        </footer>
+          <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
+            <label class="subscribe-form-label visually-hidden" for="subscribe-form-email">Ваш e-mail</label>
+            <input class="subscribe-form-email input" id="subscribe-form-email" type="email" name="email"
+              placeholder="Ваш e-mail" required>
+            <button class="subscribe-form-submit button button-larger button-blue" type="submit">Подписаться</button>
+          </form>
+        </section>
 
       </main>
       <footer class="page-footer" data-test="footer">
@@ -231,56 +230,78 @@
       </footer>
     </div>
 
-    <div class="modal-container" id="modal-search">
-      <div class="modal modal-search">
-        <button class="modal-button-close" type="button">
-          <span class="visually-hidden">Закрыть</span>
-        </button>
-        <div class="modal-content">
-          <section class="search-block">
-            <h2 class="search-title">Поиск гостиницы в Седоне</h2>
-            <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
-              <label class="search-form-label" for="search-date-from">Дата заезда:</label>
-              <input class="input search-form-input search-form-input-date-from" id="search-date-from"
-                name="search-date-from" type="text" value="27 апреля 2020" placeholder="Укажите дату">
-              <label class="search-form-label" for="search-date-to">Дата заезда:</label>
-              <input class="input search-form-input  search-form-input-date-to" id="search-date-to"
-                name="search-date-to" type="text" value="1 сентября 2021" placeholder="Укажите дату">
-              <label class="search-form-label" for="search-adults">Взрослые:</label>
-              <div class="search-form-input-number-wrapper">
-                <button class="icon input-number-control input-number-minus" type="button">
-                  <span class="visually-hidden">Уменьшить</span>
-                </button>
-                <input class="input search-form-input-number" id="search-adults" name="search-adults" type="number"
-                  value="2" min="1" max="99">
-                <button class="icon input-number-control input-number-plus" type="button">
-                  <span class="visually-hidden">Увеличить</span>
-                </button>
+    <dialog class="modal modal-search" id="modalSearch" aria-labelledby="modal-search-name">
+      <button class="modal-button-close" type="button" onclick="window.modalSearch.close()">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
+      <div class="modal-content">
+        <h2 class="search-title" id="modal-search-name">Поиск гостиницы в Седоне</h2>
+        <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
+          <label class="search-form-label" for="search-date-from">Дата заезда:</label>
+          <div class="search-form-input-date-with-icon">
+            <input class="input search-form-input-date" id="search-date-from" name="search-date-from" type="text"
+              value="27 апреля 2020" placeholder="Укажите дату" required pattern="\d{1,2}\s+\D{1,40}\s+\d{4,4}">
+            <!-- <button class="search-form-input-date-icon" type="button">
+                  <span class="visually-hidden">Нажмите для выбора даты</span>
+                </button> -->
+          </div>
+          <div class="input-message input-message-error search-input-date-message">
+            Мы не можем отправить вас в прошлое.
+          </div>
+          <label class="search-form-label" for="search-date-to">Дата выезда:</label>
+          <div class="search-form-input-date-with-icon">
+            <input class="input search-form-input-date" id="search-date-to" name="search-date-to" type="text"
+              value="1 сентября 2023" placeholder="Укажите дату" required pattern="\d{1,2}\s+\D{1,40}\s+\d{4,4}">
+            <!-- <button class="search-form-input-date-icon" type="button">
+                    <span class="visually-hidden">Нажмите для выбора даты</span>
+                  </button> -->
+          </div>
+          <div class="input-message search-input-date-message">На эти даты есть свободные номера. Пока есть.</div>
+          <label class="search-form-label" for="search-adults">Взрослые:</label>
+          <div class="search-form-input-number-wrapper">
+            <button class="icon input-number-control input-number-minus" type="button">
+              <span class="visually-hidden">Уменьшить</span>
+            </button>
+            <input class="input search-form-input-number" id="search-adults" name="search-adults" type="number"
+              value="2" min="1" max="99">
+            <button class="icon input-number-control input-number-plus" type="button">
+              <span class="visually-hidden">Увеличить</span>
+            </button>
+          </div>
+          <div class="search-form-label-wrapper">
+            <label class="search-form-label" for="search-children">
+              Дети:
+            </label>
+            <div class="search-form-info-wrapper">
+              <button class="search-form-info" type="button" aria-labelledby="tooltip-label-children">
+                <span class="visually-hidden">Посмотреть дополнительную информацию</span>
+              </button>
+              <div class="tooltip">
+                <div class="tooltip-content">
+                  <span class="tooltip-text" role="tooltip" id="tooltip-label-children">
+                    Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет
+                    размещаются бесплатно.
+                  </span>
+                </div>
               </div>
-              <label class="search-form-label" for="search-children">
-                Дети:
-                <button class="search-form-info" type="button">
-                  <span class="visually-hidden">Посмотреть дополнительную информацию</span>
-                </button>
-              </label>
-              <div class="search-form-input-number-wrapper">
-                <button class="icon input-number-control input-number-minus" type="button">
-                  <span class="visually-hidden">Уменьшить</span>
-                </button>
-                <input class="input search-form-input-number" id="search-children" name="search-children" type="number"
-                  value="2" min="0" max="99">
-                <button class="icon input-number-control input-number-plus" type="button">
-                  <span class="visually-hidden">Увеличить</span>
-                </button>
-              </div>
+            </div>
+          </div>
+          <div class="search-form-input-number-wrapper">
+            <button class="icon input-number-control input-number-minus" type="button">
+              <span class="visually-hidden">Уменьшить</span>
+            </button>
+            <input class="input search-form-input-number" id="search-children" name="search-children" type="number"
+              value="2" min="0" max="99">
+            <button class="icon input-number-control input-number-plus" type="button">
+              <span class="visually-hidden">Увеличить</span>
+            </button>
+          </div>
 
-              <input class="button button-larger button-blue  search-form-submit" type="submit" value="Найти">
-            </form>
-          </section>
-        </div>
+          <button class="button button-larger button-blue search-form-submit" type="submit">Найти</button>
+        </form>
       </div>
+    </dialog>
 
-    </div>
   </body>
 
 </html>
