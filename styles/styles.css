@@ -239,6 +239,7 @@ body {
   box-shadow: inset 0 0 0 3px transparent;
   color: var(--button-text);
   background-color: transparent;
+  transition: box-shadow 0.1s;
 }
 
 .button-transparent:hover {
@@ -608,7 +609,7 @@ body {
   background-color: var(--background-main);
 }
 
-.features-item-with-image .list-square-item-desc{
+.features-item-with-image .list-square-item-desc {
   color: inherit;
 }
 
@@ -650,9 +651,11 @@ body {
 .list-item-icon::before {
   display: block;
   margin: 0 auto 26px auto;
-  width: 84px;
-  height: 84px;
+  width: 76px;
+  height: 76px;
   content: "";
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .list-item-icon-house::before {
@@ -968,9 +971,15 @@ body {
 }
 
 /* todo изменение цвета текста при действиях???*/
-.control-input:disabled ~ .control-mark,
+/* .control-input:disabled ~ .control-mark,
 .control-label:hover .control-input:disabled ~ .control-mark {
   background-color: var(--form-element-2-disabled);
+  pointer-events: none;
+} */
+
+.control-label:has(.control-input:disabled) {
+  /* background-color: var(--form-element-2-disabled); */
+  opacity: 0.3;
   pointer-events: none;
 }
 
@@ -1233,17 +1242,21 @@ body {
   background-repeat: no-repeat;
 }
 
-.viewing-type-current {
+.viewing-type-current,
+.viewing-type-current:hover,
+.viewing-type-current:active,
+.viewing-type-current:focus {
   --border: var(--icon-border-current);
   cursor: default;
-  /* border-color: var(--icon-border-current); */
+  pointer-events: none;
 }
 
+/*
 .viewing-type-current:hover,
 .viewing-type-current:active,
 .viewing-type-current:focus {
   pointer-events: none;
-}
+} */
 
 .viewing-type-icon-tile::before {
   background-image: url("../icons/mode-tile.svg");
@@ -1430,10 +1443,9 @@ body {
 }
 
 /* Модальное окно */
-/* .modal-container { */
-.modal {
-  /* display: none; */
-  /* display: flex; */
+/* .modal-container {
+  display: none;
+  display: flex;
   position: fixed;
   top: 0;
   left: 0;
@@ -1442,23 +1454,11 @@ body {
   background-color: var(--modal-overlay);
   max-width: 717px;
 }
-
-/* for dialog */
-.modal {
-  border: none;
-  height: fit-content;
-}
-
-.modal::backdrop {
-  background-color: var(--modal-overlay);
-}
-
 .modal-container-closed {
   display: none;
 }
-
-.modal {
-  /* position: relative; */
+ .modal {
+  position: relative;
   border-radius: 30px;
   padding: 64px 70px;
   box-shadow: 0 25px 50px 0 var(--modal-shadow);
@@ -1466,6 +1466,28 @@ body {
   margin: auto;
   max-height: 100vh;
   overflow-y: auto;
+} */
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 717px;
+  height: fit-content;
+  max-height: 100vh;
+  margin: auto;
+  /* padding: 64px 70px; */
+  padding: 44px 50px;
+  border: none;
+  border-radius: 30px;
+  background-color: var(--modal-background);
+  box-shadow: 0 25px 50px 0 var(--modal-shadow);
+  overflow-y: auto;
+}
+
+.modal::backdrop {
+  background-color: var(--modal-overlay);
 }
 
 .modal-button-close {
@@ -1496,6 +1518,9 @@ body {
 .modal-button-close:active {
   background-color: var(--form-element-2-hover);
   opacity: 0.3;
+}
+.modal-content{
+  margin: 20px;
 }
 
 .search-title {
@@ -1644,8 +1669,8 @@ body {
 }
 
 .search-form-input-number {
-  padding-right: 10px;
-  padding-left: 10px;
+  padding-right: 5px;
+  padding-left: 5px;
   flex-grow: 1;
   width: 30px;
   text-align: center;
@@ -1663,7 +1688,7 @@ body {
   display: flex;
   gap: 10px;
   justify-content: flex-end;
-  padding-right: 30px;
+  padding-right: 35px;
 }
 
 .search-form-info-wrapper {
@@ -1710,8 +1735,11 @@ body {
   transition: opacity 0.2s, z-index 0.2s;
 }
 
-.search-form-info-wrapper:hover .tooltip,
-.search-form-info-wrapper:focus .tooltip {
+.search-form-info-wrapper:hover .tooltip{
+  opacity: 1;
+  z-index: 1;
+}
+.search-form-info-wrapper:focus-within .tooltip {
   opacity: 1;
   z-index: 1;
 }
