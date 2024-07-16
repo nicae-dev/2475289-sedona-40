@@ -1138,6 +1138,7 @@ body {
 .catalog-filters-price-input {
   padding-right: 37px;
   width: 143px;
+  appearance: textfield;
 }
 
 .catalog-filters-price-input::-webkit-outer-spin-button,
