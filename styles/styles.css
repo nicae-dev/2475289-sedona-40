@@ -1769,6 +1769,11 @@ body {
   border-radius: 4px;
 }
 
+
+.input-number-control:hover {
+  fill: var(--icon-number-hover);
+}
+
 .input-number-control:focus {
   outline: none;
 }
@@ -1777,11 +1782,6 @@ body {
   outline: 3px solid var(--button-second);
   fill: var(--icon-number-hover);
 }
-
-.input-number-control:hover {
-  fill: var(--icon-number-hover);
-}
-
 .input-number-control:active {
   fill: var(--icon-number-active);
 }
@@ -1890,12 +1890,8 @@ body {
   width: 20px;
   height: 9px;
   margin: 0 auto;
-  -webkit-mask-image: url("../icons/triangle.svg");
-          mask-image: url("../icons/triangle.svg");
-  -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
-  -webkit-mask-position: bottom;
-          mask-position: bottom;
-  background: var(--text-second);
+  background-image: url("../icons/triangle.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
   content: "";
 }
