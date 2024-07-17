@@ -1246,6 +1246,7 @@ body {
   appearance: none;
   -webkit-transition: border-color 0.4s;
   transition: border-color 0.4s;
+  cursor: pointer;
 }
 
 .hotels-sorting:disabled {
@@ -1710,6 +1711,7 @@ body {
 }
 
 .input-number-control svg {
+  display: block;
   border-radius: 4px;
   fill: var(--icon-number-control);
   -webkit-transition: outline 0.1s, fill 0.1s;
