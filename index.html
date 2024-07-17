@@ -66,7 +66,8 @@
 
         <section class="features" data-test="advantages">
           <header class="features-header">
-            <h2 class="features-title section-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
+            <h2 class="features-title section-title">Седона — небольшой городок в Аризоне, <br>заслуживающий большего!
+            </h2>
             <p class="features-desc section-desc">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
           </header>
 
@@ -82,7 +83,7 @@
                 alt="Кафе вдали, рядом зелень">
             </li>
             <li class="features-item list-square-item">
-              <h3 class="features-item-title list-square-item-title">Небольшая площадь</h3>
+              <h3 class="features-item-title list-square-item-title">Небольшая<br>площадь</h3>
               <p class="list-square-item-desc">Все достопримечательности находятся очень близко</p>
             </li>
             <li class="features-item list-square-item">
@@ -98,39 +99,35 @@
                 alt="Каньон вид сверху">
               <div class="list-square-item">
                 <h3 class="features-item-title list-square-item-title">Там есть <br>мост дьявола</h3>
-                <p class="list-square-item-desc ">
-                  Да, по нему можно пройти! Если вы осмелитесь, разумеется
+                <p class="list-square-item-desc">
+                  Да, по нему можно пройти!<br>Если вы осмелитесь,<br>разумеется
                 </p>
               </div>
             </li>
           </ul>
         </section>
 
-        <section class="advantages" data-test="advantages">
+        <section class="advantages" data-test="service">
 
           <header class="advantages-header">
             <h2 class="visually-hidden">Преимущества</h2>
-            <p class="advantages-title section-title">Приезжайте в Седону отдохнуть в комфорте и уюте!</p>
+            <p class="advantages-title section-title">Приезжайте в Седону отдохнуть <br>в комфорте и уюте!</p>
             <p class="advantages-desc section-desc">Опытный персонал и качественное обслуживание!</p>
           </header>
 
           <ul class="advantages-list list-square">
             <li class="advantages-item list-square-item">
               <h3 class="advantages-item-title list-square-item-title list-item-icon list-item-icon-house">Жильё</h3>
-              <p class="advantages-item-desc list-square-item-desc">Рекомендуем пожить <br>в настоящем мотеле, <br>всё
-                как в кино!
-              </p>
+              <p class="advantages-item-desc list-square-item-desc">Рекомендуем пожить <br>в настоящем мотеле, <br>всё как в кино!</p>
             </li>
             <li class="advantages-item list-square-item">
               <h3 class="advantages-item-title list-square-item-title list-item-icon list-item-icon-eating">Еда</h3>
-              <p class="advantages-item-desc list-square-item-desc">Всегда заказывайте <br>топовый фирменный бургер, вы
-                не разочаруетесь!</p>
+              <p class="advantages-item-desc list-square-item-desc">Всегда заказывайте <br>топовый фирменный бургер, <br>вы не разочаруетесь!</p>
             </li>
             <li class="advantages-item list-square-item">
               <h3 class="advantages-item-title list-square-item-title list-item-icon list-item-icon-souvenir">Сувениры
               </h3>
-              <p class="advantages-item-desc list-square-item-desc">Не только китайского, <br>но и настоящего местного
-                производства!</p>
+              <p class="advantages-item-desc list-square-item-desc">Не только китайского, <br>но и настоящего местного производства!</p>
             </li>
           </ul>
 
@@ -141,20 +138,17 @@
           <header class="search-header">
             <h2 class="visually-hidden">Поиск гостиниц</h2>
             <p class="section-title">Заинтересовались?</p>
-            <p class="section-desc">Укажите предполагаемые даты поездки, <br>и мы покажем вам лучшие
-              предложения гостиниц в Седоне</p>
+            <p class="section-desc">Укажите предполагаемые даты поездки, <br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
           </header>
 
-          <button class="button button-larger" type="button" onclick="window.modalSearch.showModal()">Поиск гостиницы в
-            Седоне</button>
+          <button class="button button-larger" type="button" onclick="window.modalSearch.showModal()">Поиск гостиницы в Седоне</button>
 
         </section>
 
         <section class="subscribe subscribe-background-image" data-test="subscribe">
           <header class="subscribe-header">
             <h2 class="subscribe-title section-title">Подпишитесь на рассылку</h2>
-            <p class="subscribe-desc section-desc">Только полезная информация и никакого спама,
-              честное бойскаутское!</p>
+            <p class="subscribe-desc section-desc">Только полезная информация и никакого спама, честное бойскаутское!</p>
           </header>
 
           <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
@@ -228,7 +222,7 @@
       </footer>
     </div>
 
-    <dialog class="modal modal-search" id="modalSearch" aria-labelledby="modal-search-name">
+    <dialog class="modal modal-search" id="modalSearch" aria-labelledby="modal-search-name" data-test="modal">
       <button class="modal-button-close" type="button" onclick="window.modalSearch.close()">
         <span class="visually-hidden">Закрыть</span>
       </button>
@@ -254,16 +248,15 @@
             <button class="icon input-number-control input-number-minus" type="button">
               <span class="visually-hidden">Уменьшить</span>
               <svg aria-hidden="true" focusable="false" width="21" height="20" viewBox="0 0 21 20" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3.39282 9V11H17.3928V9H3.39282Z"/>
-                </svg>
+                <path d="M3.39282 9V11H17.3928V9H3.39282Z" />
+              </svg>
             </button>
-            <input class="input search-form-input-number" id="search-adults" name="search-adults" type="number"
-              value="2" min="1" max="99">
+            <input class="input search-form-input-number" id="search-adults" name="search-adults" type="number" value="2" min="1" max="99">
             <button class="icon input-number-control" type="button">
               <span class="visually-hidden">Увеличить</span>
               <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z"/>
-                </svg>
+                <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z" />
+              </svg>
             </button>
           </div>
           <div class="search-form-label-wrapper">
@@ -277,8 +270,7 @@
               <div class="tooltip">
                 <div class="tooltip-content">
                   <span class="tooltip-text" role="tooltip" id="tooltip-label-children">
-                    Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет
-                    размещаются бесплатно.
+                    Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
                   </span>
                 </div>
               </div>
@@ -287,18 +279,20 @@
           <div class="search-form-input-number-wrapper">
             <button class="icon input-number-control input-number-minus" type="button">
               <span class="visually-hidden">Уменьшить</span>
-              <svg aria-hidden="true" focusable="false" width="21" height="20" viewBox="0 0 21 20" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3.39282 9V11H17.3928V9H3.39282Z"/>
-                </svg>
+              <svg aria-hidden="true" focusable="false" width="21" height="20" viewBox="0 0 21 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.39282 9V11H17.3928V9H3.39282Z" />
+              </svg>
 
             </button>
             <input class="input search-form-input-number" id="search-children" name="search-children" type="number"
               value="2" min="0" max="99">
             <button class="icon input-number-control input-number-plus" type="button">
               <span class="visually-hidden">Увеличить</span>
-              <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z"/>
-                </svg>
+              <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z" />
+              </svg>
 
             </button>
           </div>
