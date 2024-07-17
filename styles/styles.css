@@ -1226,8 +1226,8 @@ body {
 }
 
 .hotels-sorting {
-  padding: 12px 53px 12px 20px;
-  min-width: 290px;
+  padding: 12px 50px 12px 18px;
+  min-width: 292px;
   border: 2px solid var(--icon-border);
   border-radius: 4px;
   font-family: inherit;
@@ -1238,7 +1238,7 @@ body {
   background-color: var(--background-basic);
   background-image: url("../icons/arrow.svg");
   background-repeat: no-repeat;
-  background-position: right 16px center;
+  background-position: right 14px center;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
