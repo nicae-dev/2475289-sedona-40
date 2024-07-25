@@ -210,37 +210,39 @@ body {
 .button-blue {
   color: var(--text-background-default);
   background-color: var(--button-second);
+
+  &:hover {
+    background-color: var(--button-second-hover);
+  }
+
+  &:focus {
+    background-color: var(--button-second-focus);
+  }
+
+  &:active {
+    background-color: var(--button-second-active);
+    color: var(--button-text-active);
+  }
+
 }
 
-.button-blue:hover {
-  background-color: var(--button-second-hover);
-}
-
-.button-blue:focus {
-  background-color: var(--button-second-focus);
-}
-
-.button-blue:active {
-  background-color: var(--button-second-active);
-  color: var(--button-text-active);
-}
-
-.button-green {
+.button-selected {
   color: var(--text-background-default);
   background-color: var(--button-selected);
-}
 
-.button-green:hover {
-  background-color: var(--button-selected-hover);
-}
+  &:hover {
+    background-color: var(--button-selected-hover);
+  }
 
-.button-green:focus {
-  background-color: var(--button-selected-focus);
-}
+  &:focus {
+    background-color: var(--button-selected-focus);
+  }
 
-.button-green:active {
-  background-color: var(--button-selected-active);
-  color: var(--button-text-active);
+  &:active {
+    background-color: var(--button-selected-active);
+    color: var(--button-text-active);
+  }
+
 }
 
 .button-transparent {
@@ -250,31 +252,29 @@ body {
   color: var(--button-text);
   background-color: transparent;
   -webkit-transition: color var(--anim-slow), outline var(--anim-fast);
-  ;
   transition: color var(--anim-slow), outline var(--anim-fast);
-  ;
-}
 
-.button-transparent:hover {
-  color: var(--button-transparent-hover);
-  background-color: transparent;
-}
+  &:hover {
+    color: var(--button-transparent-hover);
+    background-color: transparent;
+  }
 
-.button-transparent:focus {
-  -webkit-box-shadow: inset 0 0 0 3px var(--button-transparent-border-color);
-  box-shadow: inset 0 0 0 3px var(--button-transparent-border-color);
-  background-color: transparent;
-  outline: none;
-}
+  &:focus {
+    -webkit-box-shadow: inset 0 0 0 3px var(--button-transparent-border-color);
+    box-shadow: inset 0 0 0 3px var(--button-transparent-border-color);
+    background-color: transparent;
+    outline: none;
+  }
 
-.button-transparent:active {
-  color: var(--button-transparent-active);
-  background-color: transparent;
-}
+  &:active {
+    color: var(--button-transparent-active);
+    background-color: transparent;
+  }
 
-.button-transparent:disabled {
-  background-color: transparent;
-  color: var(--button-transparent-disabled);
+  &:disabled {
+    background-color: transparent;
+    color: var(--button-transparent-disabled);
+  }
 }
 
 .text-link {
@@ -282,18 +282,18 @@ body {
   color: var(--text-basic);
   -webkit-transition: color var(--anim-slow);
   transition: color var(--anim-slow);
-}
 
-.text-link:focus {
-  color: var(--text-focus);
-}
+  &:focus {
+    color: var(--text-focus);
+  }
 
-.text-link:hover {
-  color: var(--text-hover);
-}
+  &:hover {
+    color: var(--text-hover);
+  }
 
-.text-link:active {
-  color: var(--text-active);
+  &:active {
+    color: var(--text-active);
+  }
 }
 
 .input {
@@ -308,15 +308,21 @@ body {
   background-color: var(--form-element-2);
   -webkit-transition: background-color var(--anim-slow), outline var(--anim-fast);
   transition: background-color var(--anim-slow), outline var(--anim-fast);
-}
 
-.input:focus {
-  background-color: var(--form-element-2-hover);
-  outline: 3px solid var(--form-element-2-focus-border);
-}
+  &:focus {
+    background-color: var(--form-element-2-hover);
+    outline: 3px solid var(--form-element-2-focus-border);
+  }
 
-.input:hover {
-  background-color: var(--form-element-2-hover);
+  &:hover {
+    background-color: var(--form-element-2-hover);
+  }
+
+  &:disabled,
+  &:disabled:hover {
+    opacity: 0.3;
+    pointer-events: none;
+  }
 }
 
 .input:-moz-placeholder-shown {
@@ -334,24 +340,18 @@ body {
   color: var(--text-basic-semitransparent);
 }
 
-.input:disabled,
-.input:disabled:hover {
-  opacity: 0.3;
-  pointer-events: none;
-}
-
 .icon-with-svg {
   position: relative;
-}
 
-.icon-with-svg svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  fill: currentColor;
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    fill: currentColor;
+  }
 }
 
 /* Стили страниц */
@@ -414,11 +414,11 @@ body {
   display: block;
   -webkit-transition: filter var(--anim-slow);
   transition: filter var(--anim-slow);
-}
 
-.logo-image:hover,
-.logo-image:focus {
-  filter: drop-shadow(0 0 6px var(--text-basic));
+  &:hover,
+  &:focus {
+    filter: drop-shadow(0 0 6px var(--text-basic));
+  }
 }
 
 .navigation {
@@ -461,15 +461,15 @@ body {
   color: inherit;
   -webkit-transition: color var(--anim-slow);
   transition: color var(--anim-slow);
-}
 
-.navigation-link:hover,
-.navigation-link:focus {
-  color: var(--text-hover);
-}
+  &:hover,
+  &:focus {
+    color: var(--text-hover);
+  }
 
-.navigation-link:active {
-  color: var(--text-active);
+  &:active {
+    color: var(--text-active);
+  }
 }
 
 .navigation-link-current:hover,
@@ -806,18 +806,18 @@ body {
   color: var(--icon-second);
   -webkit-transition: color var(--anim-slow);
   transition: color var(--anim-slow);
-}
 
-.footer-icon:focus-visible {
-  color: var(--icon-second-focus);
-}
+  &:focus-visible {
+    color: var(--icon-second-focus);
+  }
 
-.footer-icon:hover {
-  color: var(--icon-second-hover);
-}
+  &:hover {
+    color: var(--icon-second-hover);
+  }
 
-.footer-icon:active {
-  color: var(--icon-second-active);
+  &:active {
+    color: var(--icon-second-active);
+  }
 }
 
 .footer-social {
@@ -945,14 +945,14 @@ body {
   opacity: 1;
   -webkit-transition: opacity var(--anim-slow);
   transition: opacity var(--anim-slow);
-}
 
-.breadcrumbs-link:hover {
-  opacity: 0.6;
-}
+  &:hover {
+    opacity: 0.6;
+  }
 
-.breadcrumbs-link:active {
-  opacity: 0.3;
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .breadcrumbs-link-current,
@@ -996,15 +996,15 @@ body {
   line-height: 1.28em;
   -webkit-transition: opacity var(--anim-slow);
   transition: opacity var(--anim-slow);
-}
 
-.control-label:hover {
-  opacity: 0.6;
-  cursor: pointer;
-}
+  &:hover {
+    opacity: 0.6;
+    cursor: pointer;
+  }
 
-.control-label:active {
-  opacity: 0.3;
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .control-mark {
@@ -1183,24 +1183,24 @@ body {
   transition: outline var(--anim-fast), -webkit-box-shadow var(--anim-slow);
   transition: box-shadow var(--anim-slow), outline var(--anim-fast);
   transition: box-shadow var(--anim-slow), outline var(--anim-fast), -webkit-box-shadow var(--anim-slow);
-}
 
-.range-toggle:hover {
-  -webkit-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
-  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
-  cursor: pointer;
-}
+  &:hover {
+    -webkit-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+  }
 
-.range-toggle:focus {
-  -webkit-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
-  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
-  outline: 3px solid var(--form-element-2-focus-border);
-}
+  &:focus {
+    -webkit-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+    outline: 3px solid var(--form-element-2-focus-border);
+  }
 
-.range-toggle:active {
-  -webkit-box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.4);
-  box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.4);
-  outline: 2px solid var(--form-element-2-focus-border);
+  &:active {
+    -webkit-box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.4);
+    box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.4);
+    outline: 2px solid var(--form-element-2-focus-border);
+  }
 }
 
 .range-toggle-min {
@@ -1253,20 +1253,20 @@ body {
   -webkit-transition: border-color var(--anim-slow);
   transition: border-color var(--anim-slow);
   cursor: pointer;
-}
 
-.hotels-sorting:disabled {
-  opacity: 0.3;
-  pointer-events: none;
-}
+  &:disabled {
+    opacity: 0.3;
+    pointer-events: none;
+  }
 
-.hotels-sorting:focus {
-  border-color: var(--button-second-hover);
-  outline: none;
-}
+  &:focus {
+    border-color: var(--button-second-hover);
+    outline: none;
+  }
 
-.hotels-sorting:hover {
-  border-color: var(--button-second-hover);
+  &:hover {
+    border-color: var(--button-second-hover);
+  }
 }
 
 .hotels-header {
@@ -1313,19 +1313,19 @@ body {
   transition: -webkit-box-shadow var(--anim-fast);
   transition: box-shadow var(--anim-fast);
   transition: box-shadow var(--anim-fast), -webkit-box-shadow var(--anim-fast);
-}
 
-.viewing-type-link:focus {
-  --border: var(--icon-border-focus);
-  outline: none;
-}
+  &:focus {
+    --border: var(--icon-border-focus);
+    outline: none;
+  }
 
-.viewing-type-link:hover {
-  --border: var(--icon-border-hover);
-}
+  &:hover {
+    --border: var(--icon-border-hover);
+  }
 
-.viewing-type-link:active {
-  --border: var(--icon-border-active);
+  &:active {
+    --border: var(--icon-border-active);
+  }
 }
 
 .viewing-type-link::before {
@@ -1419,8 +1419,6 @@ body {
     ;
   }
 
-
-
 }
 
 .hotels-card {
@@ -1446,8 +1444,6 @@ body {
   border-radius: 4px;
   color: var(--text-basic);
 }
-
-
 
 .hotel-link {
   display: contents;
@@ -1584,12 +1580,12 @@ body {
   min-height: 60px;
   display: block;
   border: 1px solid var(--button-second);
-}
 
-.pagination-link:hover,
-.pagination-link:active,
-.pagination-link:focus {
-  border: 1px solid var(--button-second);
+  &:hover,
+  &:active,
+  &:focus {
+    border: 1px solid var(--button-second);
+  }
 }
 
 .pagination-link-dots {
@@ -1648,21 +1644,21 @@ body {
   background-position: center;
   -webkit-transition: background-color var(--anim-slow), outline var(--anim-fast), opacity var(--anim-fast);
   transition: background-color var(--anim-slow), outline var(--anim-fast), opacity var(--anim-fast);
-}
 
-.modal-button-close:focus {
-  background-color: var(--form-element-2-hover);
-  outline: 3px solid var(--form-element-2-focus-border);
-}
+  &:focus {
+    background-color: var(--form-element-2-hover);
+    outline: 3px solid var(--form-element-2-focus-border);
+  }
 
-.modal-button-close:hover {
-  background-color: var(--form-element-2-hover);
-  cursor: pointer;
-}
+  &:hover {
+    background-color: var(--form-element-2-hover);
+    cursor: pointer;
+  }
 
-.modal-button-close:active {
-  background-color: var(--form-element-2-hover);
-  opacity: 0.3;
+  &:active {
+    background-color: var(--form-element-2-hover);
+    opacity: 0.3;
+  }
 }
 
 .modal-content {
@@ -1745,7 +1741,7 @@ body {
   grid-column: 2/-1;
 }
 
-.search-form-input-number-wrapper {
+.input-number-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1756,7 +1752,7 @@ body {
   transition: background-color var(--anim-slow);
 }
 
-.search-form-input-number-wrapper:has(:hover) {
+.input-number-wrapper:has(:hover) {
   background-color: var(--form-element-2-hover);
 }
 
@@ -1767,34 +1763,34 @@ body {
   border: none;
   background-color: transparent;
   cursor: pointer;
+
+  & svg {
+    display: block;
+    border-radius: 4px;
+    fill: var(--icon-number-control);
+    -webkit-transition: outline var(--anim-fast), fill var(--anim-slow);
+    transition: outline var(--anim-fast), fill var(--anim-slow);
+  }
+
+  &:hover svg {
+    fill: var(--icon-number-hover);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus svg {
+    outline: 3px solid var(--button-second);
+    fill: var(--icon-number-hover);
+  }
+
+  &:active svg {
+    fill: var(--icon-number-active);
+  }
 }
 
-.input-number-control svg {
-  display: block;
-  border-radius: 4px;
-  fill: var(--icon-number-control);
-  -webkit-transition: outline var(--anim-fast), fill var(--anim-slow);
-  transition: outline var(--anim-fast), fill var(--anim-slow);
-}
-
-.input-number-control:hover svg {
-  fill: var(--icon-number-hover);
-}
-
-.input-number-control:focus {
-  outline: none;
-}
-
-.input-number-control:focus svg {
-  outline: 3px solid var(--button-second);
-  fill: var(--icon-number-hover);
-}
-
-.input-number-control:active svg {
-  fill: var(--icon-number-active);
-}
-
-.search-form-input-number {
+.input-number {
   padding-right: 5px;
   padding-left: 5px;
   -webkit-box-flex: 1;
@@ -1811,8 +1807,8 @@ body {
   appearance: textfield;
 }
 
-.search-form-input-number::-webkit-inner-spin-button,
-.search-form-input-number::-webkit-outer-spin-button {
+.input-number::-webkit-inner-spin-button,
+.input-number::-webkit-outer-spin-button {
   -webkit-appearance: none;
   appearance: none;
   margin: 0;
