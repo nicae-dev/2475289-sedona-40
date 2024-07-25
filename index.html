@@ -244,15 +244,15 @@
           </div>
           <div class="input-message search-input-date-message">На эти даты есть свободные номера. Пока есть.</div>
           <label class="search-form-label" for="search-adults">Взрослые:</label>
-          <div class="search-form-input-number-wrapper">
+          <div class="input-number-wrapper">
             <button class="icon input-number-control input-number-minus" type="button">
               <span class="visually-hidden">Уменьшить</span>
               <svg aria-hidden="true" focusable="false" width="21" height="20" viewBox="0 0 21 20" xmlns="http://www.w3.org/2000/svg">
                 <path d="M3.39282 9V11H17.3928V9H3.39282Z" />
               </svg>
             </button>
-            <input class="input search-form-input-number" id="search-adults" name="search-adults" type="number" value="2" min="1" max="99">
-            <button class="icon input-number-control" type="button">
+            <input class="input input-number" id="search-adults" name="search-adults" type="number" value="2" min="1" max="99">
+            <button class="icon input-number-control input-number-plus" type="button">
               <span class="visually-hidden">Увеличить</span>
               <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z" />
@@ -276,7 +276,7 @@
               </div>
             </div>
           </div>
-          <div class="search-form-input-number-wrapper">
+          <div class="input-number-wrapper">
             <button class="icon input-number-control input-number-minus" type="button">
               <span class="visually-hidden">Уменьшить</span>
               <svg aria-hidden="true" focusable="false" width="21" height="20" viewBox="0 0 21 20"
@@ -285,7 +285,7 @@
               </svg>
 
             </button>
-            <input class="input search-form-input-number" id="search-children" name="search-children" type="number"
+            <input class="input input-number" id="search-children" name="search-children" type="number"
               value="2" min="0" max="99">
             <button class="icon input-number-control input-number-plus" type="button">
               <span class="visually-hidden">Увеличить</span>
@@ -303,6 +303,7 @@
     </dialog>
 
     <script src="js/modal.js"></script>
+    <script src="js/input-number.js"></script>
   </body>
 
 </html>
