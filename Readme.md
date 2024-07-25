@@ -4,8 +4,8 @@
 * Наставник: [Виктор Рыбаков](https://htmlacademy.ru/profile/viktor-rybakov).
 * Сайт: [Мой проект Sedona](https://nicae-dev.github.io/2475289-sedona-40/)
 
----
 После успешной защиты проекта были внесены дополнения:
+
 *JS-код модального окна вынесен в отдельный файл
 *Добавлен JS-код переключения вида карточек. Для видов ["Показать карточкой"](https://nicae-dev.github.io/2475289-sedona-40/catalog.html?view=card) и ["Показать списком"](https://nicae-dev.github.io/2475289-sedona-40/catalog.html?view=list) макет отсутствовал.
 ---
