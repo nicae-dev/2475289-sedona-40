@@ -141,7 +141,7 @@
             <p class="section-desc">Укажите предполагаемые даты поездки, <br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
           </header>
 
-          <button class="button button-larger" type="button" onclick="window.modalSearch.showModal()">Поиск гостиницы в Седоне</button>
+          <button class="button button-larger" id="openModalSearch" type="button" >Поиск гостиницы в Седоне</button>
 
         </section>
 
@@ -223,7 +223,7 @@
     </div>
 
     <dialog class="modal modal-search" id="modalSearch" aria-labelledby="modal-search-name" data-test="modal">
-      <button class="modal-button-close" type="button" onclick="window.modalSearch.close()">
+      <button class="modal-button-close"  id="closeModalSearch" type="button" >
         <span class="visually-hidden">Закрыть</span>
       </button>
       <div class="modal-content">
@@ -302,6 +302,7 @@
       </div>
     </dialog>
 
+    <script src="js/modal.js"></script>
   </body>
 
 </html>

@@ -98,6 +98,11 @@
   --modal-overlay: rgba(242, 242, 242, 0.8);
   --modal-background: #ffffff;
   --modal-shadow: rgba(0, 0, 0, 0.15);
+
+  /* скорость анимации */
+  --anim-fast: 0.1s;
+  --anim-medium: 0.2s;
+  --anim-slow: 0.4s;
 }
 
 /* Глобальные селекторы */
@@ -154,8 +159,8 @@ body {
   color: var(--button-text);
   background-color: var(--button-basic);
   cursor: pointer;
-  -webkit-transition: background-color 0.4s, color 0.4s, outline 0.1s;
-  transition: background-color 0.4s, color 0.4s, outline 0.1s;
+  -webkit-transition: background-color var(--anim-slow), color var(--anim-slow), outline var(--anim-fast);
+  transition: background-color var(--anim-slow), color var(--anim-slow), outline var(--anim-fast);
 }
 
 .button:focus {
@@ -244,10 +249,10 @@ body {
   box-shadow: inset 0 0 0 3px transparent;
   color: var(--button-text);
   background-color: transparent;
-  -webkit-transition: -webkit-box-shadow 0.1s;
-  transition: -webkit-box-shadow 0.1s;
-  transition: box-shadow 0.1s;
-  transition: box-shadow 0.1s, -webkit-box-shadow 0.1s;
+  -webkit-transition: color var(--anim-slow), outline var(--anim-fast);
+  ;
+  transition: color var(--anim-slow), outline var(--anim-fast);
+  ;
 }
 
 .button-transparent:hover {
@@ -275,8 +280,8 @@ body {
 .text-link {
   text-decoration: none;
   color: var(--text-basic);
-  -webkit-transition: color 0.4s;
-  transition: color 0.4s;
+  -webkit-transition: color var(--anim-slow);
+  transition: color var(--anim-slow);
 }
 
 .text-link:focus {
@@ -301,8 +306,8 @@ body {
   line-height: 1.33em;
   color: var(--text-basic);
   background-color: var(--form-element-2);
-  -webkit-transition: background-color 0.4s, outline 0.1s;
-  transition: background-color 0.4s, outline 0.1s;
+  -webkit-transition: background-color var(--anim-slow), outline var(--anim-fast);
+  transition: background-color var(--anim-slow), outline var(--anim-fast);
 }
 
 .input:focus {
@@ -380,9 +385,10 @@ body {
   position: relative;
   margin: 0 10px -6px 0;
   align-self: start;
+
 }
 
-.logo::after {
+/* .logo::after {
   display: block;
   height: 140px;
   width: 140px;
@@ -395,20 +401,24 @@ body {
   opacity: 0;
   -webkit-transform: rotate(-45deg) skew(-3deg, -3deg);
   transform: rotate(-45deg) skew(-3deg, -3deg);
-  -webkit-transition: opacity 0.4s;
-  transition: opacity 0.4s;
+  -webkit-transition: opacity var(--anim-slow);
+  transition: opacity var(--anim-slow);
   border-bottom-left-radius: 20px;
 }
-
 .logo:hover::after,
 .logo:focus::after {
   opacity: 1;
-}
+} */
 
 .logo-image {
   display: block;
-  position: relative;
-  z-index: 1;
+  -webkit-transition: filter var(--anim-slow);
+  transition: filter var(--anim-slow);
+}
+
+.logo-image:hover,
+.logo-image:focus {
+  filter: drop-shadow(0 0 6px var(--text-basic));
 }
 
 .navigation {
@@ -449,8 +459,8 @@ body {
   text-transform: capitalize;
   text-decoration: none;
   color: inherit;
-  -webkit-transition: color 0.4s;
-  transition: color 0.4s;
+  -webkit-transition: color var(--anim-slow);
+  transition: color var(--anim-slow);
 }
 
 .navigation-link:hover,
@@ -508,8 +518,8 @@ body {
   text-align: center;
   color: var(--text-background-default);
   background-color: var(--button-selected);
-  -webkit-transition: opacity 0.4s;
-  transition: opacity 0.4s;
+  -webkit-transition: opacity var(--anim-slow);
+  transition: opacity var(--anim-slow);
 }
 
 .navigation-icon-liked:hover .navigation-icon-liked-count,
@@ -794,8 +804,8 @@ body {
   width: 47px;
   height: 40px;
   color: var(--icon-second);
-  -webkit-transition: color 0.4s;
-  transition: color 0.4s;
+  -webkit-transition: color var(--anim-slow);
+  transition: color var(--anim-slow);
 }
 
 .footer-icon:focus-visible {
@@ -933,8 +943,8 @@ body {
   color: inherit;
   display: block;
   opacity: 1;
-  -webkit-transition: opacity 0.4s;
-  transition: opacity 0.4s;
+  -webkit-transition: opacity var(--anim-slow);
+  transition: opacity var(--anim-slow);
 }
 
 .breadcrumbs-link:hover {
@@ -984,8 +994,8 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 1.28em;
-  -webkit-transition: opacity 0.4s;
-  transition: opacity 0.4s;
+  -webkit-transition: opacity var(--anim-slow);
+  transition: opacity var(--anim-slow);
 }
 
 .control-label:hover {
@@ -1006,8 +1016,8 @@ body {
   margin-right: 16px;
   margin-top: 0.1em;
   background-color: var(--background-basic);
-  -webkit-transition: outline 0.1s;
-  transition: outline 0.1s;
+  -webkit-transition: outline var(--anim-fast);
+  transition: outline var(--anim-fast);
 }
 
 .control-input[type="checkbox"] ~ .control-mark {
@@ -1169,10 +1179,10 @@ body {
   height: 20px;
   background-color: var(--range-color-active);
   border: none;
-  -webkit-transition: outline 0.1s, -webkit-box-shadow 0.4s;
-  transition: outline 0.1s, -webkit-box-shadow 0.4s;
-  transition: box-shadow 0.4s, outline 0.1s;
-  transition: box-shadow 0.4s, outline 0.1s, -webkit-box-shadow 0.4s;
+  -webkit-transition: outline var(--anim-fast), -webkit-box-shadow var(--anim-slow);
+  transition: outline var(--anim-fast), -webkit-box-shadow var(--anim-slow);
+  transition: box-shadow var(--anim-slow), outline var(--anim-fast);
+  transition: box-shadow var(--anim-slow), outline var(--anim-fast), -webkit-box-shadow var(--anim-slow);
 }
 
 .range-toggle:hover {
@@ -1240,8 +1250,8 @@ body {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  -webkit-transition: border-color 0.4s;
-  transition: border-color 0.4s;
+  -webkit-transition: border-color var(--anim-slow);
+  transition: border-color var(--anim-slow);
   cursor: pointer;
 }
 
@@ -1290,6 +1300,7 @@ body {
 .viewing-type-item {
   display: block;
 }
+
 .viewing-type-link {
   --border: var(--icon-border);
   padding: 17px 16px;
@@ -1298,10 +1309,10 @@ body {
   box-shadow: inset 0 0 0 2px var(--border);
   border: none;
   border-radius: 4px;
-  -webkit-transition: -webkit-box-shadow 0.1s;
-  transition: -webkit-box-shadow 0.1s;
-  transition: box-shadow 0.1s;
-  transition: box-shadow 0.1s, -webkit-box-shadow 0.1s;
+  -webkit-transition: -webkit-box-shadow var(--anim-fast);
+  transition: -webkit-box-shadow var(--anim-fast);
+  transition: box-shadow var(--anim-fast);
+  transition: box-shadow var(--anim-fast), -webkit-box-shadow var(--anim-fast);
 }
 
 .viewing-type-link:focus {
@@ -1354,6 +1365,64 @@ body {
   list-style-type: none;
 }
 
+.hotels-list[data-viewing-type="list"] {
+  flex-direction: column;
+}
+
+[data-viewing-type="list"] {
+  .hotels-card {
+    width: 100%;
+    grid-template-columns: 200px auto 1fr auto;
+    grid-template-areas:
+      "image title title stars"
+      "image type price ."
+      "image more like rating"
+    ;
+  }
+
+  .hotel-price {
+    justify-self: start;
+  }
+
+  .hotel-stars {
+    justify-self: end;
+  }
+
+  .hotel-rating {
+    align-self: end;
+  }
+
+  .hotel-more {
+    align-self: end;
+  }
+
+  .hotel-like {
+    align-self: end;
+    justify-self: start;
+  }
+}
+
+.hotels-list[data-viewing-type="card"] {
+  flex-direction: column;
+}
+
+[data-viewing-type="card"] {
+  .hotels-card {
+    width: 100%;
+    grid-template-columns: 600px 1fr 1fr;
+    grid-template-areas:
+      "image title title"
+      "image type price"
+      "image more more"
+      "image like like"
+      "image stars rating"
+    ;
+  }
+
+
+
+}
+
 .hotels-card {
   padding: 20px;
   width: 340px;
@@ -1377,6 +1446,8 @@ body {
   border-radius: 4px;
   color: var(--text-basic);
 }
+
+
 
 .hotel-link {
   display: contents;
@@ -1575,8 +1646,8 @@ body {
   background-image: url("../icons/cross.svg");
   background-repeat: no-repeat;
   background-position: center;
-  -webkit-transition: background-color 0.4s, outline 0.1s, opacity 0.1s;
-  transition: background-color 0.4s, outline 0.1s, opacity 0.1s;
+  -webkit-transition: background-color var(--anim-slow), outline var(--anim-fast), opacity var(--anim-fast);
+  transition: background-color var(--anim-slow), outline var(--anim-fast), opacity var(--anim-fast);
 }
 
 .modal-button-close:focus {
@@ -1635,8 +1706,8 @@ body {
   display: flex;
   grid-column: 2/-1;
   border-radius: 4px;
-  -webkit-transition: background-color 0.4s;
-  transition: background-color 0.4s;
+  -webkit-transition: background-color var(--anim-slow);
+  transition: background-color var(--anim-slow);
 }
 
 .search-form-input-date {
@@ -1681,8 +1752,8 @@ body {
   border: none;
   border-radius: 4px;
   background-color: var(--form-element-2);
-  -webkit-transition: background-color 0.4s;
-  transition: background-color 0.4s;
+  -webkit-transition: background-color var(--anim-slow);
+  transition: background-color var(--anim-slow);
 }
 
 .search-form-input-number-wrapper:has(:hover) {
@@ -1702,8 +1773,8 @@ body {
   display: block;
   border-radius: 4px;
   fill: var(--icon-number-control);
-  -webkit-transition: outline 0.1s, fill 0.1s;
-  transition: outline 0.1s, fill 0.1s;
+  -webkit-transition: outline var(--anim-fast), fill var(--anim-slow);
+  transition: outline var(--anim-fast), fill var(--anim-slow);
 }
 
 .input-number-control:hover svg {
@@ -1800,8 +1871,8 @@ body {
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   z-index: -1;
-  -webkit-transition: opacity 0.2s, z-index 0.2s;
-  transition: opacity 0.2s, z-index 0.2s;
+  -webkit-transition: opacity var(--anim-medium), z-index var(--anim-medium);
+  transition: opacity var(--anim-medium), z-index var(--anim-medium);
 }
 
 .search-form-info-wrapper:hover .tooltip,

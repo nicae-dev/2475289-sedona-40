@@ -168,27 +168,27 @@
 
             <h2 class="hotels-title">Найдено гостиниц: 38</h2>
 
-              <select class="hotels-sorting" aria-label="Сортировка">
-                <option value="popular">Сначала популярные</option>
-                <option value="cheap" selected>Сначала дешевые</option>
-                <option value="expensive">Сначала дорогие</option>
-              </select>
+            <select class="hotels-sorting" aria-label="Сортировка">
+              <option value="popular">Сначала популярные</option>
+              <option value="cheap" selected>Сначала дешевые</option>
+              <option value="expensive">Сначала дорогие</option>
+            </select>
 
             <ul class="viewing-type-list">
               <li class="viewing-type-item">
-                <a class="viewing-type-link viewing-type-icon-tile viewing-type-current" href="catalog.html?view=tile"
+                <a class="viewing-type-link viewing-type-icon-tile viewing-type-current" data-viewing-type="tile" href="catalog.html?view=tile"
                   title="Показать плиткой">
                   <span class="visually-hidden">Показать плиткой</span>
                 </a>
               </li>
               <li class="viewing-type-item">
-                <a class="viewing-type-link viewing-type-icon-card" href="catalog.html?view=card"
+                <a class="viewing-type-link viewing-type-icon-card" data-viewing-type="card" href="catalog.html?view=card"
                   title="Показать карточками">
                   <span class="visually-hidden">Показать карточками</span>
                 </a>
               </li>
               <li class="viewing-type-item">
-                <a class="viewing-type-link viewing-type-icon-list" href="catalog.html?view=list"
+                <a class="viewing-type-link viewing-type-icon-list" data-viewing-type="list" href="catalog.html?view=list"
                   title="Показать списком">
                   <span class="visually-hidden">Показать списком</span>
                 </a>
@@ -196,7 +196,7 @@
             </ul>
           </header>
 
-          <ul class="hotels-list">
+          <ul class="hotels-list" id="hotels-list" data-viewing-type="tile">
             <li class="hotels-item">
               <article class="hotels-card">
                 <a class="hotel-link text-link" href="#">
@@ -366,6 +366,7 @@
       </footer>
     </div>
 
+    <script src="js/cards.js"></script>
   </body>
 
 </html>
